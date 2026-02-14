@@ -23,5 +23,15 @@ namespace OnlineCourses.Repositories
             await _context.SaveChangesAsync();
             return profile;
         }
+
+        public async Task<UserProfile> DeleteProfile(int Id)
+        {
+            var userprofile = await _context.UserProfiles.FindAsync(Id);
+            if (userprofile == null)
+                return null;
+            _context.UserProfiles.Remove(userprofile);
+            await _context.SaveChangesAsync();
+            return userprofile;
+        }
     }
 }

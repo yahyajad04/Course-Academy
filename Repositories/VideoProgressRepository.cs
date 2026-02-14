@@ -16,6 +16,11 @@ namespace OnlineCourses.Repositories
 
         public async Task<VideoProgress> CreateProgress(VideoProgress progress)
         {
+            var oldprogress = await _context.VideoProgress
+                .FirstOrDefaultAsync(p => p.UserProfileId == progress.UserProfileId && p.VideosId == progress.VideosId);
+            if (oldprogress != null) {
+                return null;
+            }
             var video = await _context.Videos.FindAsync(progress.VideosId);
             if (video == null)
                 return null;
@@ -28,7 +33,7 @@ namespace OnlineCourses.Repositories
         public async Task<VideoProgress> GetProgress(string AppUserId, int Videoid)
         {
             var profile = await _context.UserProfiles.FirstOrDefaultAsync(p => p.AppUserId.Equals(AppUserId));
-            return await _context.VideoProgress.Include(a => a.Videos)
+            return await _context.VideoProgress.Include(a => a.Videos).Include(u => u.UserProfile).ThenInclude(v => v.AppUser)
                 .FirstOrDefaultAsync(v => v.UserProfileId == profile.Id && v.VideosId == Videoid);
         }
 
@@ -38,6 +43,7 @@ namespace OnlineCourses.Repositories
             var videoprogress = await _context.VideoProgress
                 .Include(a => a.Videos)
                 .Include(b => b.UserProfile)
+                .ThenInclude(c => c.AppUser)
                 .FirstOrDefaultAsync(v => v.UserProfileId == profile.Id
                 && v.VideosId == progressdto.VideosId);
             var video = await _context.Videos.FindAsync(progressdto.VideosId);

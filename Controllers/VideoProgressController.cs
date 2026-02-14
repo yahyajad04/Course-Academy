@@ -43,7 +43,7 @@ namespace OnlineCourses.Controllers
                 .FirstOrDefaultAsync(a => a.Id == userId);
 
             progressdto.UserProfileId = user.UserProfile.Id;
-            progressdto.UserProfile = user.UserProfile;
+            progressdto.UserProfileDTO = user.UserProfile.toUserProfileDTO();
             var progressbefore = progressdto.fromCreateVideoProgressDTO();
             var progress = await _videoProgressRepository.CreateProgress(progressbefore);
 

@@ -1,4 +1,5 @@
-﻿using OnlineCourses.DTO_s.Videos;
+﻿using OnlineCourses.DTO_s.UserProfile;
+using OnlineCourses.DTO_s.Videos;
 using OnlineCourses.Models;
 using System.Text.Json.Serialization;
 
@@ -9,7 +10,7 @@ namespace OnlineCourses.DTO_s.VideoProgress
         [JsonIgnore]
         public int UserProfileId { get; set; }
         [JsonIgnore]
-        public UserProfile? UserProfile { get; set; }
+        public UserProfileDTO? UserProfileDTO { get; set; }
         public int VideosId { get; set; }
     }
 }

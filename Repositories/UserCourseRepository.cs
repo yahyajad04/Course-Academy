@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using OnlineCourses.Data;
 using OnlineCourses.DTO_s.UserCourse;
 using OnlineCourses.Interfaces;
+using OnlineCourses.Mappers;
 using OnlineCourses.Models;
 
 namespace OnlineCourses.Repositories
@@ -21,6 +22,7 @@ namespace OnlineCourses.Repositories
         {
             var usercourse = await _context.UserCourses
                 .Include(p => p.UserProfile)
+                .ThenInclude(u => u.AppUser)
                 .FirstOrDefaultAsync(u => u.UserProfile.AppUserId.Equals(AppUserId) && u.CourseId == CourseId);
             if (usercourse == null) {
                 return null;
@@ -70,7 +72,8 @@ namespace OnlineCourses.Repositories
 
         public async Task<List<UserCourse>> GetAllUsers(int id)
         {
-            return await _context.UserCourses.Include(u => u.UserProfile).Where(c => c.CourseId == id).ToListAsync();
+            return await _context.UserCourses.Include(u => u.UserProfile).ThenInclude(p => p.AppUser)
+                .Where(c => c.CourseId == id).ToListAsync();
         }
     }
 }

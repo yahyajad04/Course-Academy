@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "OnlineCourses.Controllers.AppUserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/AppUser/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineCourses.Controllers.AppUserController",
     "Method": "GetCode",
     "RelativePath": "api/AppUser/GetVerificationCode",
     "HttpMethod": "POST",
@@ -74,6 +84,22 @@
       {
         "Name": "registordto",
         "Type": "OnlineCourses.DTO_s.AppUser.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineCourses.Controllers.AppUserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/AppUser/RemoveUser/{Email}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -260,7 +286,33 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isAscending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

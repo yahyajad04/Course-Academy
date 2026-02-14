@@ -2,6 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using OnlineCourses.Data;
 using OnlineCourses.DTO_s.Courses;
+using OnlineCourses.Helpers;
 using OnlineCourses.Interfaces;
 using OnlineCourses.Mappers;
 using OnlineCourses.Models;
@@ -57,9 +58,36 @@ namespace OnlineCourses.Repositories
             return course;
         }
 
-        public async Task<List<Course>> GetAllAsync()
+        public async Task<List<Course>> GetAllAsync(QueryObject query)
         {
-            return await _context.Courses.Include(c => c.Videos).Include(r => r.Reviews).ToListAsync();
+            var courses = _context.Courses.Include(v => v.Category)
+                .Include(c => c.Videos).Include(r => r.Reviews).AsQueryable();
+            //Searching
+            if (!query.Search.IsNullOrEmpty())
+            {
+                courses = courses.Where(c => 
+                c.Name.Contains(query.Search) ||
+                c.Description.Contains(query.Search)||
+                c.Category.Name.Contains(query.Search));
+            }
+            //Sorting
+            if (!query.SortOrder.IsNullOrEmpty())
+            {
+                switch (query.SortOrder.ToLower().Replace(" ", "").Trim()) {
+
+                    case "category":
+                        courses = query.isAscending ? courses.OrderBy(c => c.Category.Name) : 
+                        courses.OrderByDescending(c => c.Category.Name);
+                        break;
+                    case "price": 
+                        courses = query.isAscending ? courses.OrderBy(c => c.Price) :
+                        courses.OrderByDescending(c => c.Price);
+                        break;
+                }
+            }
+            //Paging
+            var skipnum = (query.PageNumber - 1) * query.PageSize;
+            return await courses.Skip(skipnum).Take(query.PageSize).ToListAsync();
         }
 
         public async Task<Course> GetByIdAsync(int id)

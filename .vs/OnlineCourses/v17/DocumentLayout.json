@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\repositories\\videoprogressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:repositories\\videoprogressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\mappers\\videoprogressmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:mappers\\videoprogressmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\controllers\\videoprogresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:controllers\\videoprogresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\helpers\\queryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:helpers\\queryobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\dto\u0027s\\videoprogress\\createvideoprogressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:dto\u0027s\\videoprogress\\createvideoprogressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|c:\\users\\asus\\desktop\\web-projects-course\\onlinecourses\\interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C7C40A-09C7-45B6-81F7-5B23BEB89CDC}|OnlineCourses.csproj|solutionrelative:interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VideoProgressMapper.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Mappers\\VideoProgressMapper.cs",
-              "RelativeDocumentMoniker": "Mappers\\VideoProgressMapper.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Mappers\\VideoProgressMapper.cs",
-              "RelativeToolTip": "Mappers\\VideoProgressMapper.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAArwA8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T19:00:18.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VideoProgressRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Repositories\\VideoProgressRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\VideoProgressRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Repositories\\VideoProgressRepository.cs",
-              "RelativeToolTip": "Repositories\\VideoProgressRepository.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCcAAAArAAAAAAAAAA==",
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Repositories\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CourseRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Repositories\\CourseRepository.cs",
+              "RelativeToolTip": "Repositories\\CourseRepository.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwFQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T18:59:05.567Z",
+              "WhenOpened": "2026-02-14T16:43:44.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateVideoProgressDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\DTO\u0027s\\VideoProgress\\CreateVideoProgressDTO.cs",
-              "RelativeDocumentMoniker": "DTO\u0027s\\VideoProgress\\CreateVideoProgressDTO.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\DTO\u0027s\\VideoProgress\\CreateVideoProgressDTO.cs",
-              "RelativeToolTip": "DTO\u0027s\\VideoProgress\\CreateVideoProgressDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "Title": "ICourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Interfaces\\ICourseRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICourseRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Interfaces\\ICourseRepository.cs",
+              "RelativeToolTip": "Interfaces\\ICourseRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T18:58:08.948Z",
+              "WhenOpened": "2026-02-14T16:43:35.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VideoProgressController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Controllers\\VideoProgressController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VideoProgressController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Controllers\\VideoProgressController.cs",
-              "RelativeToolTip": "Controllers\\VideoProgressController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
+              "Title": "QueryObject.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Helpers\\QueryObject.cs",
+              "RelativeDocumentMoniker": "Helpers\\QueryObject.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Helpers\\QueryObject.cs",
+              "RelativeToolTip": "Helpers\\QueryObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T18:22:17.294Z",
+              "WhenOpened": "2026-02-14T16:32:09.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\web-projects-course\\OnlineCourses\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Controllers\\CourseController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T16:31:32.864Z",
               "EditorCaption": ""
             }
           ]

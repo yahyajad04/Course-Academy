@@ -22,7 +22,7 @@ namespace OnlineCourses.Mappers
             return new CourseUserDTO
             {
                 UserProfileId = userCourse.UserProfileId,
-                UserProfile = userCourse.UserProfile,
+                UserProfileDTO = userCourse.UserProfile.toUserProfileDTO(),
                 CourseId = userCourse.CourseId,
                 isPayed = userCourse.isPayed,
                 isDone = userCourse.isDone,

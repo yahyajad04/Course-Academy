@@ -175,3 +175,4 @@ C:\Users\ASUS\Desktop\web-projects-course\OnlineCourses\bin\Debug\net8.0\Newtons
 C:\Users\ASUS\Desktop\web-projects-course\OnlineCourses\bin\Debug\net8.0\SendGrid.dll
 C:\Users\ASUS\Desktop\web-projects-course\OnlineCourses\bin\Debug\net8.0\StarkbankEcdsa.dll
 C:\Users\ASUS\Desktop\web-projects-course\OnlineCourses\bin\Debug\net8.0\Mailtrap.dll
+C:\Users\ASUS\Desktop\web-projects-course\OnlineCourses\obj\Debug\net8.0\OnlineCourses.sourcelink.json

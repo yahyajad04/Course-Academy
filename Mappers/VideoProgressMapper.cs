@@ -10,7 +10,7 @@ namespace OnlineCourses.Mappers
             return new VideoProgressDTO
             {
                 UserProfileId = videoProgress.UserProfileId,
-                UserProfile = videoProgress.UserProfile,
+                UserProfileDTO = videoProgress.UserProfile.toUserProfileDTO(),
                 VideosId = videoProgress.VideosId,
                 Videos = videoProgress.Videos.toVideosDTO(),
                 Progress = videoProgress.Progress,
@@ -22,7 +22,6 @@ namespace OnlineCourses.Mappers
             return new VideoProgress
             {
                 UserProfileId = createVideoProgressDTO.UserProfileId,
-                UserProfile = createVideoProgressDTO.UserProfile,
                 VideosId = createVideoProgressDTO.VideosId,
             };
         }

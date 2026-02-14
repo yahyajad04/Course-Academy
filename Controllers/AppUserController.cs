@@ -26,6 +26,16 @@ namespace OnlineCourses.Controllers
             _emailService = emailService;
             _profileRepository = userProfileRepository;
         }
+
+        [HttpGet("GetAllUsers")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var users = await _userManager.Users.ToListAsync();
+            var users_emails = users.Select(u => u.Email).ToList();
+            return Ok(users_emails);
+        }
+
         [HttpPost("RegisterUser")]
         public async Task<IActionResult> RegisterUserAsync(RegisterDTO registordto)
         {
@@ -262,6 +272,29 @@ namespace OnlineCourses.Controllers
             catch (Exception ex) {
                 return StatusCode(500, ex.Message);
             }
+        }
+        [HttpDelete("RemoveUser/{Email}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteUser([FromRoute] string Email)
+        {
+            var user = await _userManager.Users.Include(p => p.UserProfile)
+                .FirstOrDefaultAsync(u => u.Email.Equals(Email));
+
+            if (user == null)
+                return NotFound("This User Email Doesnt Exist");
+
+            var delete = await _userManager.DeleteAsync(user);
+
+            if (delete.Succeeded)
+            {
+                var response = await _profileRepository.DeleteProfile(user.UserProfile.Id);
+                if (response != null)
+                    return Ok($"User {user.Email} Deleted Successfully");
+                else
+                    return StatusCode(500, "UserProfile Didnt get Deleted!");
+            }
+            else
+                return StatusCode(500, "User Didnt Get Deleted!");
         }
 
     }

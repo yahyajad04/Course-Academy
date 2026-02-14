@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OnlineCourses.DTO_s.Courses;
 using OnlineCourses.Extensions;
+using OnlineCourses.Helpers;
 using OnlineCourses.Interfaces;
 using OnlineCourses.Mappers;
 using OnlineCourses.Models;
@@ -24,9 +25,9 @@ namespace OnlineCourses.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllCourses()
+        public async Task<IActionResult> GetAllCourses([FromQuery] QueryObject query)
         {
-            var courses = await _courseRepo.GetAllAsync();
+            var courses = await _courseRepo.GetAllAsync(query);
             var coursesdto = courses.Select(c => c.toCourseDTO()).ToList();
 
             return Ok(coursesdto);
